@@ -5,12 +5,16 @@ while True:
     # user_input = input('請輸入數字:')
     # user_input  = int(user_input)
     # # print(type(user_input))
-    user_input = int(input('請輸入數字:'))
-       
+    try:
+        user_input = int(input('請輸入1~100數字:')) 
+    except Exception as e:
+        print("請輸入數字")
+        continue
+
     if user_input <1 or user_input > 80:
         print('超出範圍請重新輸入')
     elif user_input > answer:
-         print('請輸入更小的數字')
+        print('請輸入更小的數字')
     elif user_input < answer:
         print('請輸入更大的數字')
     else:
